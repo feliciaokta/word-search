@@ -32,7 +32,8 @@ const transpose = function(matrix) {
     }
   
     const horizontalJoin = letters.map(ls => ls.join(''));
-    const verticalJoined = transpose(letters).join('');
+    //using transpose fn to flip the array vertically
+    const verticalJoined = transpose(letters).map(ls => ls.join(''));
   
     for (l of horizontalJoin) {
       if (l.includes(word)) {
